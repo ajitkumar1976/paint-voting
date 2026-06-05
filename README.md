@@ -107,6 +107,16 @@ Good options:
 - **Docker on a VPS** (DigitalOcean, Hetzner, etc.) with the included `docker-compose.yml`
 - **Railway / Render / Fly.io** — deploy the Dockerfile and attach a persistent volume mounted at `/app/data`
 
+### Render
+
+1. Connect the GitHub repo `ajitkumar1976/paint-voting`
+2. **Build command:** `npm install && npm run build`
+3. **Start command:** `npm start` (do not use a hardcoded port — Render sets `PORT`)
+4. Add env var `ADMIN_PASSWORD` in the Render dashboard
+5. Attach a **persistent disk** mounted at `/opt/render/project/src/data` (included in `render.yaml`)
+
+Or use the included `render.yaml` blueprint when creating the service.
+
 ---
 
 ## Admin workflow
@@ -145,7 +155,7 @@ Good options:
 | `npm run dev` | Development (localhost only) |
 | `npm run dev:lan` | Development on all interfaces (WiFi) |
 | `npm run build` | Production build |
-| `npm run start` | Production (localhost) |
-| `npm run start:lan` | Production on all interfaces (WiFi) |
+| `npm run start` | Production (binds to `PORT`, default 3000) |
+| `npm run start:lan` | Same as `start` — listens on all interfaces for WiFi/LAN |
 | `npm run docker:up` | Build & run with Docker Compose |
 | `npm run docker:down` | Stop Docker containers |

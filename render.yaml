@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: paint-voting
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOSTNAME
+        value: 0.0.0.0
+      - key: ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: paint-voting-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1

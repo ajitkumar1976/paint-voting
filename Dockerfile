@@ -14,7 +14,6 @@ COPY . .
 RUN npm run build
 
 ENV NODE_ENV=production
-ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
 
 EXPOSE 3000
@@ -22,4 +21,4 @@ EXPOSE 3000
 # Persist SQLite DB + uploaded images in /app/data
 VOLUME ["/app/data"]
 
-CMD ["npm", "run", "start:lan"]
+CMD ["npm", "start"]
