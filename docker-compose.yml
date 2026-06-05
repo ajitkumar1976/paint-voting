@@ -1,0 +1,13 @@
+services:
+  paint-voting:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin123}
+    volumes:
+      - paint-voting-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  paint-voting-data:

@@ -1,0 +1,32 @@
+# Dependencies & build
+node_modules
+.next
+
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Runtime data (created on first run)
+data/db.json
+data/db.json.bak
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/uploads/*
+!data/uploads/.gitkeep
+public/uploads/*
+!public/uploads/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+*.swp
+
+# Logs
+npm-debug.log*
+*.log

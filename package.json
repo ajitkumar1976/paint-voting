@@ -1,0 +1,33 @@
+{
+  "name": "paint-voting",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Children's art competition voting platform",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "dev:lan": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "start:lan": "next start -H 0.0.0.0 -p 3000",
+    "docker:up": "docker compose up --build -d",
+    "docker:down": "docker compose down"
+  },
+  "dependencies": {
+    "better-sqlite3": "11.10.0",
+    "next": "15.3.3",
+    "qrcode": "1.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
+    "@types/node": "22.15.29",
+    "@types/qrcode": "1.5.5",
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.5",
+    "typescript": "5.8.3"
+  }
+}
